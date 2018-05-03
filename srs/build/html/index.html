@@ -104,7 +104,9 @@
 </ul>
 </li>
 <li><a class="reference internal" href="#system-features">4.System Features</a><ul>
-<li><a class="reference internal" href="#system-feature-a">4.1 System feature A</a></li>
+<li><a class="reference internal" href="#system-feature-upload">4.1 System feature —- Upload</a></li>
+<li><a class="reference internal" href="#system-feature-analysis">4.2 System feature —- Analysis</a></li>
+<li><a class="reference internal" href="#system-feature-download">4.3 System feature —- Download</a></li>
 </ul>
 </li>
 <li><a class="reference internal" href="#other-non-functional-requirements">5.Other Non-functional Requirements</a><ul>
@@ -198,11 +200,11 @@
 <h2>1.2 Document conventions<a class="headerlink" href="#document-conventions" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li>Control sample - a cell sample prepared in its normal condition.</li>
-<li>Treatment sample - a cell sample treated by special chemicals, or in which some genes are altered.</li>
-<li>Differentially expressed genes - the genes which have significantly different expression levels between two samples.</li>
-<li>Up-regulation - a gene is said to be up-regulated if it has higher expression in treatment than in control</li>
-<li>logFC - log fold change of gene expression.  log_2 [T/C], where T is the gene expression level from a treatment sample, while C is the gene expression level from a control sample.</li>
+<li><strong>Control sample</strong> - a cells sample prepared in its normal condition.</li>
+<li><strong>Treatment sample</strong> - a cell sample treated by special chemicals, or in which some genes are altered.</li>
+<li><strong>Differentially expressed genes</strong> - the genes which have significantly different expression levels between two samples.</li>
+<li><strong>Up-regulation</strong> - a gene is said to be up-regulated if it has higher expression in treatment than in control</li>
+<li><strong>logFC</strong> - log fold change of gene expression.  log_2 [T/C], where T is the gene expression level from a treatment sample, while C is the gene expression level from a control sample.</li>
 </ul>
 </div></blockquote>
 </div>
@@ -240,7 +242,7 @@
 <div class="section" id="operating-environment">
 <h2>2.4 Operating environment<a class="headerlink" href="#operating-environment" title="Permalink to this headline">¶</a></h2>
 <p>This figure illustrates an example of a Oh My Genes operating environment. It includes a firewall, a Web front-end cluster, and the application server.</p>
-<img alt="../images/a.jpg" src="../images/a.jpg" />
+<img alt="https://raw.githubusercontent.com/C-mirrors/test_S/master/a.png" src="https://raw.githubusercontent.com/C-mirrors/test_S/master/a.png" />
 </div>
 <div class="section" id="user-environment">
 <h2>2.5 User environment<a class="headerlink" href="#user-environment" title="Permalink to this headline">¶</a></h2>
@@ -269,16 +271,15 @@ Application Server: Tomcat 5.5 or later</p>
 The approximate input interface frame is as follows:</li>
 </ul>
 </div></blockquote>
-<img alt="../images/b.jpg" src="../images/b.jpg" />
-<dl class="docutils">
-<dt>The interface shows a text message to prompt the user to choose a plain text file containing gene expression levels from two samples. A area, click to select local file upload. A button, click to upload the file and call the system to analyze the data.</dt>
-<dd><ul class="first last simple">
-<li>Output interface</li>
+<img alt="https://raw.githubusercontent.com/C-mirrors/test_S/master/b.png" src="https://raw.githubusercontent.com/C-mirrors/test_S/master/b.png" />
+<p>The interface shows a text message to prompt the user to choose a plain text file containing gene expression levels from two samples. A area, click to select local file upload. A button, click to upload the file and call the system to analyze the data.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Output interface
+The approximate output interface frame is as follows:</li>
 </ul>
-</dd>
-</dl>
-<p>The approximate output interface frame is as follows:</p>
-<img alt="_images/c.jpg" src="_images/c.jpg" />
+</div></blockquote>
+<img alt="https://raw.githubusercontent.com/C-mirrors/test_S/master/c.png" src="https://raw.githubusercontent.com/C-mirrors/test_S/master/c.png" />
 <p>The interface shows the contents of the output file, which contains a table and a scatter plot given a gene expression file.
 The table contains a list of differentially expressed genes with the following format:
 gene_id  control_sample  treat_sample  log_2[FC]
@@ -301,14 +302,18 @@ Replace ‘Control’ and ‘Treatment’ with appropriated column names if prov
 </div>
 <div class="section" id="system-features">
 <h1>4.System Features<a class="headerlink" href="#system-features" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="system-feature-a">
-<h2>4.1 System feature A<a class="headerlink" href="#system-feature-a" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="system-feature-upload">
+<h2>4.1 System feature —- Upload<a class="headerlink" href="#system-feature-upload" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><ul class="simple">
-<li>Action/result</li>
-<li>Functional requirements</li>
-</ul>
-</div></blockquote>
+<div>The system function allows users to freely upload a plain text file containing gene expression levels from two samples by customizing the local location.</div></blockquote>
+</div>
+<div class="section" id="system-feature-analysis">
+<h2>4.2 System feature —- Analysis<a class="headerlink" href="#system-feature-analysis" title="Permalink to this headline">¶</a></h2>
+<p>This system function performs input and output conversion and calculation.</p>
+</div>
+<div class="section" id="system-feature-download">
+<h2>4.3 System feature —- Download<a class="headerlink" href="#system-feature-download" title="Permalink to this headline">¶</a></h2>
+<p>This system function presents the user with output tables and scatter plots, and provides download buttons to allow users to download the package themselves.</p>
 </div>
 </div>
 <div class="section" id="other-non-functional-requirements">
@@ -329,26 +334,25 @@ Replace ‘Control’ and ‘Treatment’ with appropriated column names if prov
 <li><p class="first">Data encryption</p>
 <p>This application program encrypts some important data according to a certain algorithm, such as user password, important parameters, etc.</p>
 </li>
-<li><p class="first">Data backup
-Allows users to back up and restore data to compensate for data corruption and loss.</p>
+<li><p class="first">Data backup</p>
+<p>Allows users to back up and restore data to compensate for data corruption and loss.</p>
 </li>
-<li><p class="first">Record log
-The application should be able to record all errors that occurred while the system was running, including native and network errors. These error logs make it easy to find the cause of the error. The log records the user’s housekeeping operation information and provides history information for the next use.</p>
+<li><p class="first">Record log</p>
+<p>The application should be able to record all errors that occurred while the system was running, including native and network errors. These error logs make it easy to find the cause of the error. The log records the user’s housekeeping operation information and provides history information for the next use.</p>
 </li>
 </ul>
 </div></blockquote>
 </div>
 <div class="section" id="user-documentation">
 <h2>5.3 User documentation<a class="headerlink" href="#user-documentation" title="Permalink to this headline">¶</a></h2>
-<dl class="docutils">
-<dt>User documentation distributed with the software includes:</dt>
-<dd><ol class="first last arabic simple">
+<p>User documentation distributed with the software includes:</p>
+<blockquote>
+<div><ol class="arabic simple">
 <li>Installation Manual: txt format file</li>
 <li>User Manual: txt format file</li>
 <li>Online help: HTML Help format files, online</li>
 </ol>
-</dd>
-</dl>
+</div></blockquote>
 </div>
 </div>
 <div class="section" id="other-requirements">
@@ -365,31 +369,28 @@ The application should be able to record all errors that occurred while the syst
 <div class="section" id="use-cases">
 <h2>7.1 Use Cases<a class="headerlink" href="#use-cases" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><p>Actors: User</p>
-<p>Purpose: To identify differentially expressed genes given a gene expression file containing two cell samples.</p>
-<p>Overview: User uploads a plain text file containing gene expression levels from two samples, representing two experimental conditions. The web application displays a table and a scatter plot given a gene expression file.</p>
-<p>Main Scenario:</p>
+<div><p><strong>Actors:</strong> User</p>
+<p><strong>Purpose:</strong> To identify differentially expressed genes given a gene expression file containing two cell samples</p>
+<p><strong>Overview:</strong> User uploads a plain text file containing gene expression levels from two samples, representing two experimental conditions. The web application displays a table and a scatter plot given a gene expression file.</p>
+<p><strong>Main Scenario:</strong></p>
 <ol class="arabic simple">
 <li>User uploads a plain text file containing gene expression levels from two samples, representing two experimental conditions.</li>
 <li>Accepting the file, the software will return a table of differentially expressed genes and a scatter plot of these genes whose X-axis is control and Y-axis is treatment.</li>
 </ol>
-</div></blockquote>
-<dl class="docutils">
-<dt>Alternate Scenario 2.a (User uploads invalid gene expression):</dt>
-<dd><ol class="first last arabic simple">
+<p><strong>Alternate Scenario 2.a (User uploads invalid gene expression):</strong></p>
+<ol class="arabic simple">
 <li>User uploads a plain text file containing gene expression levels from two samples, representing two experimental conditions.</li>
 <li>The web application returns a page informing the user to provide the correct format.</li>
 </ol>
-</dd>
-</dl>
+</div></blockquote>
 </div>
 <div class="section" id="change-cases">
 <h2>7.2 Change cases<a class="headerlink" href="#change-cases" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li>Change case: The web application can enter multiple data for processing.</li>
-<li>Likelihood: Certain. Developers have the appropriate technology.</li>
-<li>Impact: Large. The system handles data more quickly and easily.</li>
+<li><strong>Change case:</strong> The web application can enter multiple data for processing.</li>
+<li><strong>Likelihood:</strong> Certain. Developers have the appropriate technology.</li>
+<li><strong>Impact:</strong> Large. The system handles data more quickly and easily.</li>
 </ul>
 </div></blockquote>
 </div>
@@ -397,13 +398,16 @@ The application should be able to record all errors that occurred while the syst
 <h2>7.3 Milestone<a class="headerlink" href="#milestone" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
 <dt>Step-by-step implementation various functions of the web application, and set up to Milestone in the implementation process to facilitate retrospective changes to the realization of various functions.</dt>
-<dd><ul class="first last simple">
-<li>Input
-A valid submitted gene expression file has the following format.  It is a TAB-delimited, plain text file with three columns.  The file contains an optional head line, followed by each gene’s expression in a control sample and in a treatment sample.</li>
-<li>Analysis
-The system analysis and compare the given data. And generate the Output.</li>
-<li>Output
-The web application displays a table and a scatter plot given a gene expression file.</li>
+<dd><ul class="first last">
+<li><p class="first"><strong>Input</strong></p>
+<p>A valid submitted gene expression file has the following format.  It is a TAB-delimited, plain text file with three columns.  The file contains an optional head line, followed by each gene’s expression in a control sample and in a treatment sample.</p>
+</li>
+<li><p class="first"><strong>Analysis</strong></p>
+<p>The system analysis and compare the given data. And generate the Output.</p>
+</li>
+<li><p class="first"><strong>Output</strong></p>
+<p>The web application displays a table and a scatter plot given a gene expression file.</p>
+</li>
 </ul>
 </dd>
 </dl>
