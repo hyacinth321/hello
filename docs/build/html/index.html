@@ -79,16 +79,20 @@
             
               <!-- Local TOC -->
               <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Software Requirements Specification</a><ul>
-<li><a class="reference internal" href="#introduction">1.Introduction</a></li>
+<li><a class="reference internal" href="#">Software Requirements Specification</a></li>
+<li><a class="reference internal" href="#introduction">1.Introduction</a><ul>
+<li><a class="reference internal" href="#purpose">1.1 Purpose</a></li>
+<li><a class="reference internal" href="#document-conventions">1.2 Document conventions</a></li>
+<li><a class="reference internal" href="#intended-audience">1.3 Intended audience</a></li>
+<li><a class="reference internal" href="#contact-information-srs-team-members">1.4 Contact information/SRS team members</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#overall-description">2.Overall Description</a></li>
 <li><a class="reference internal" href="#external-interface-requirements">3.External Interface Requirements</a></li>
 <li><a class="reference internal" href="#system-features">4.System Features</a></li>
 <li><a class="reference internal" href="#other-non-functional-requirements">5.Other Non-functional Requirements</a></li>
 <li><a class="reference internal" href="#other-requirements">6.Other Requirements</a></li>
 <li><a class="reference internal" href="#others">7.Others</a></li>
-</ul>
-</li>
 </ul>
 </div>
             
@@ -155,24 +159,58 @@
             
   <div class="section" id="software-requirements-specification">
 <h1>Software Requirements Specification<a class="headerlink" href="#software-requirements-specification" title="Permalink to this headline">¶</a></h1>
+</div>
 <div class="section" id="introduction">
-<h2>1.Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
-<p>** * Purpose **
-** * Document conventions **
-** * Intended audience **
-** * Contact information/SRS team members **</p>
+<h1>1.Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="purpose">
+<h2>1.1 Purpose<a class="headerlink" href="#purpose" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>This document describes the software requirements of oh my genes. It is intended for the users to identify differently expressed genes by given a gene expression file containing two cell samples.</div></blockquote>
+</div>
+<div class="section" id="document-conventions">
+<h2>1.2 Document conventions<a class="headerlink" href="#document-conventions" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>Control sample - a cell sample prepared in its normal condition.</li>
+<li>Treatment sample - a cell sample treated by special chemicals, or in which some genes are altered.</li>
+<li>Differentially expressed genes - the genes which have significantly different expression levels between two samples.</li>
+<li>Up-regulation - a gene is said to be up-regulated if it has higher expression in treatment than in control</li>
+<li>logFC - log fold change of gene expression.  log_2 [T/C], where T is the gene expression level from a treatment sample, while C is the gene expression level from a control sample.</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="intended-audience">
+<h2>1.3 Intended audience<a class="headerlink" href="#intended-audience" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>Biologists in the Little Hill Laboratory for Optimal Life (potentially worldwide).</li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="contact-information-srs-team-members">
+<h2>1.4 Contact information/SRS team members<a class="headerlink" href="#contact-information-srs-team-members" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ul class="simple">
+<li>Lumos —– Cai MengYuan &amp; Jin RuoNi.</li>
+</ul>
+</div></blockquote>
+</div>
 </div>
 <div class="section" id="overall-description">
-<h2>2.Overall Description<a class="headerlink" href="#overall-description" title="Permalink to this headline">¶</a></h2>
-<p>** * Product perspective **
-** * Product functions **
-** * User classes and characteristics **
-** * Operating environment **
-** * User environment **
-** * Design/implementation constraints **</p>
+<h1>2.Overall Description<a class="headerlink" href="#overall-description" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div><ul class="simple">
+<li>Product perspective</li>
+<li>Product functions</li>
+<li>User classes and characteristics</li>
+<li>Operating environment</li>
+<li>User environment</li>
+<li>Design/implementation constraints</li>
+</ul>
+</div></blockquote>
 </div>
 <div class="section" id="external-interface-requirements">
-<h2>3.External Interface Requirements<a class="headerlink" href="#external-interface-requirements" title="Permalink to this headline">¶</a></h2>
+<h1>3.External Interface Requirements<a class="headerlink" href="#external-interface-requirements" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><ul class="simple">
 <li>User interfaces</li>
@@ -183,7 +221,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="system-features">
-<h2>4.System Features<a class="headerlink" href="#system-features" title="Permalink to this headline">¶</a></h2>
+<h1>4.System Features<a class="headerlink" href="#system-features" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><ul class="simple">
 <li>System feature A</li>
@@ -191,7 +229,7 @@
 </div></blockquote>
 </div>
 <div class="section" id="other-non-functional-requirements">
-<h2>5.Other Non-functional Requirements<a class="headerlink" href="#other-non-functional-requirements" title="Permalink to this headline">¶</a></h2>
+<h1>5.Other Non-functional Requirements<a class="headerlink" href="#other-non-functional-requirements" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><ul class="simple">
 <li>Performance requirements</li>
@@ -201,11 +239,11 @@
 </div></blockquote>
 </div>
 <div class="section" id="other-requirements">
-<h2>6.Other Requirements<a class="headerlink" href="#other-requirements" title="Permalink to this headline">¶</a></h2>
+<h1>6.Other Requirements<a class="headerlink" href="#other-requirements" title="Permalink to this headline">¶</a></h1>
 <p>Content1</p>
 </div>
 <div class="section" id="others">
-<h2>7.Others<a class="headerlink" href="#others" title="Permalink to this headline">¶</a></h2>
+<h1>7.Others<a class="headerlink" href="#others" title="Permalink to this headline">¶</a></h1>
 <blockquote>
 <div><ul class="simple">
 <li>Use Cases</li>
@@ -215,7 +253,6 @@
 <p>a picture</p>
 </div></blockquote>
 <img alt="../images/a.jpg" src="../images/a.jpg" />
-</div>
 </div>
 
 
