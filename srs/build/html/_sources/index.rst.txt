@@ -79,7 +79,7 @@ The interface shows a text message to prompt the user to choose a plain text fil
  * Output interface
 The approximate output interface frame is as follows:
 
-.. image:: ../images/c.jpg
+.. image:: c.jpg
 
 The interface shows the contents of the output file, which contains a table and a scatter plot given a gene expression file.
 The table contains a list of differentially expressed genes with the following format:
