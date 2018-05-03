@@ -1,5 +1,5 @@
 .. Oh my genes documentation master file, created by
-   sphinx-quickstart on Thu May  3 09:39:06 2018.
+   sphinx-quickstart on Thu May  3 10:09:06 2018.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
