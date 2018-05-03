@@ -3,17 +3,23 @@ Oh my genes!
 
 
 
-
-Subject Subtitle
+Subtitle1
 ----------------
+Content1
 
 
 
+Lists can be unnumbered like:
+ 
+ * Item Foo
+ * Item Bar
+ 
+Or automatically numbered:
+ 
+ #. Item 1
+ #. Item 2
 
-List:
-*  Item1
-*  Item2
 
-
-Inline markup
-------------
+Subtitle2
+----------------
+Content2
