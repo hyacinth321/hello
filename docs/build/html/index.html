@@ -87,12 +87,39 @@
 <li><a class="reference internal" href="#contact-information-srs-team-members">1.4 Contact information/SRS team members</a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#overall-description">2.Overall Description</a></li>
-<li><a class="reference internal" href="#external-interface-requirements">3.External Interface Requirements</a></li>
-<li><a class="reference internal" href="#system-features">4.System Features</a></li>
-<li><a class="reference internal" href="#other-non-functional-requirements">5.Other Non-functional Requirements</a></li>
+<li><a class="reference internal" href="#overall-description">2.Overall Description</a><ul>
+<li><a class="reference internal" href="#product-perspective">2.1 Product perspective</a></li>
+<li><a class="reference internal" href="#product-functions">2.2 Product functions</a></li>
+<li><a class="reference internal" href="#user-classes-and-characteristics">2.3 User classes and characteristics</a></li>
+<li><a class="reference internal" href="#operating-environment">2.4 Operating environment</a></li>
+<li><a class="reference internal" href="#user-environment">2.5 User environment</a></li>
+<li><a class="reference internal" href="#design-implementation-constraints">2.6 Design/implementation constraints</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#external-interface-requirements">3.External Interface Requirements</a><ul>
+<li><a class="reference internal" href="#user-interfaces">3.1 User interfaces</a></li>
+<li><a class="reference internal" href="#hardware-interfaces">3.2 Hardware interfaces</a></li>
+<li><a class="reference internal" href="#software-interfaces">3.3 Software interfaces</a></li>
+<li><a class="reference internal" href="#communication-protocols-and-interfaces">3.4 Communication protocols and interfaces</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#system-features">4.System Features</a><ul>
+<li><a class="reference internal" href="#system-feature-a">4.1 System feature A</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#other-non-functional-requirements">5.Other Non-functional Requirements</a><ul>
+<li><a class="reference internal" href="#performance-requirements">5.1 Performance requirements</a></li>
+<li><a class="reference internal" href="#security-requirements">5.2 Security requirements</a></li>
+<li><a class="reference internal" href="#user-documentation">5.3 User documentation</a></li>
+</ul>
+</li>
 <li><a class="reference internal" href="#other-requirements">6.Other Requirements</a></li>
-<li><a class="reference internal" href="#others">7.Others</a></li>
+<li><a class="reference internal" href="#others">7.Others</a><ul>
+<li><a class="reference internal" href="#use-cases">7.1 Use Cases</a></li>
+<li><a class="reference internal" href="#change-cases">7.2 Change cases</a></li>
+<li><a class="reference internal" href="#milestone">7.3 Milestone</a></li>
+</ul>
+</li>
 </ul>
 </div>
             
@@ -181,78 +208,202 @@
 </div>
 <div class="section" id="intended-audience">
 <h2>1.3 Intended audience<a class="headerlink" href="#intended-audience" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><ul class="simple">
-<li>Biologists in the Little Hill Laboratory for Optimal Life (potentially worldwide).</li>
-</ul>
-</div></blockquote>
+<p>Biologists in the Little Hill Laboratory for Optimal Life (potentially worldwide).</p>
 </div>
 <div class="section" id="contact-information-srs-team-members">
 <h2>1.4 Contact information/SRS team members<a class="headerlink" href="#contact-information-srs-team-members" title="Permalink to this headline">¶</a></h2>
-<blockquote>
-<div><ul class="simple">
-<li>Lumos —– Cai MengYuan &amp; Jin RuoNi.</li>
-</ul>
-</div></blockquote>
+<p>Lumos —– Cai MengYuan &amp; Jin RuoNi.</p>
 </div>
 </div>
 <div class="section" id="overall-description">
 <h1>2.Overall Description<a class="headerlink" href="#overall-description" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="product-perspective">
+<h2>2.1 Product perspective<a class="headerlink" href="#product-perspective" title="Permalink to this headline">¶</a></h2>
+<p>The web application has a simple interface with a single button [Upload and GO].  Our scientists upload a plain text file containing gene expression levels from two samples, representing two experimental conditions.  Accepting the file, the software will return a table of differentially expressed genes and a scatter plot of these genes whose X-axis is control and Y-axis is treatment.  If an invalid gene expression is given, the web application returns a page informing the user to provide the correct format.</p>
+</div>
+<div class="section" id="product-functions">
+<h2>2.2 Product functions<a class="headerlink" href="#product-functions" title="Permalink to this headline">¶</a></h2>
+<p>The Oh My Genes system has the following functions:
+#.Provide users with a table of differentially expressed genes.
+#.Provide users with a scatter plot of these genes whose X-axis is control and Y-axis is treatment.
+#.Provide users with a gene expression file.</p>
+</div>
+<div class="section" id="user-classes-and-characteristics">
+<h2>2.3 User classes and characteristics<a class="headerlink" href="#user-classes-and-characteristics" title="Permalink to this headline">¶</a></h2>
+<p>Biologists in the Little Hill Laboratory for Optimal Life (potentially worldwide).</p>
+</div>
+<div class="section" id="operating-environment">
+<h2>2.4 Operating environment<a class="headerlink" href="#operating-environment" title="Permalink to this headline">¶</a></h2>
+<p>This figure illustrates an example of a Oh My Genes operating environment. It includes a firewall, a Web front-end cluster, and the application server.
+.. image:: ../images/a.jpg</p>
+</div>
+<div class="section" id="user-environment">
+<h2>2.5 User environment<a class="headerlink" href="#user-environment" title="Permalink to this headline">¶</a></h2>
+<p>Provide users with personalized settings and ensure the normal operation of the application.
+The application should apply to the operating system and configuration files of the lab’s computer.
+The system’s operating environment is divided into two parts of the client.</p>
+</div>
+<div class="section" id="design-implementation-constraints">
+<h2>2.6 Design/implementation constraints<a class="headerlink" href="#design-implementation-constraints" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>The following is the software environment of the system:</dt>
+<dd><ol class="first last arabic simple">
+<li>Client</li>
+</ol>
+</dd>
+</dl>
+<p>Operating System: Windows 2000 Professional/XP or later
+Browser: IE6 and above, other common browsers such as FireFox, Chrome, etc.</p>
 <blockquote>
-<div><ul class="simple">
-<li>Product perspective</li>
-<li>Product functions</li>
-<li>User classes and characteristics</li>
-<li>Operating environment</li>
-<li>User environment</li>
-<li>Design/implementation constraints</li>
-</ul>
+<div><ol class="arabic simple">
+<li>Application server</li>
+</ol>
 </div></blockquote>
+<p>Operating System: Windows 2000 Sever or later
+Application Server: Tomcat 5.5 or later</p>
+</div>
 </div>
 <div class="section" id="external-interface-requirements">
 <h1>3.External Interface Requirements<a class="headerlink" href="#external-interface-requirements" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="user-interfaces">
+<h2>3.1 User interfaces<a class="headerlink" href="#user-interfaces" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><ul class="simple">
-<li>User interfaces</li>
-<li>Hardware interfaces</li>
-<li>Software interfaces</li>
-<li>Communication protocols and interfaces</li>
-</ul>
+<div>#.Input interface</div></blockquote>
+<p>The approximate input interface frame is as follows:
+.. image:: ../images/a.jpg
+The interface shows a text message to prompt the user to choose a plain text file containing gene expression levels from two samples. A area, click to select local file upload. A button, click to upload the file and call the system to analyze the data.</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Output interface</li>
+</ol>
 </div></blockquote>
+<p>The approximate output interface frame is as follows:
+.. image:: ../images/a.jpg
+The interface shows the contents of the output file, which contains a table and a scatter plot given a gene expression file.
+The table contains a list of differentially expressed genes with the following format:
+gene_id  control_sample  treat_sample  log_2[FC]
+AT1G01010  1.198558083  2.036161827  0.76
+The scatter plot displays differentially expressed genes.  The X-axis is Control, and Y-axis is Treatment.
+Replace ‘Control’ and ‘Treatment’ with appropriated column names if provided in the uploaded file.  The up-regulated genes are shown in red dots, and down-regulated genes are shown in blue.</p>
+</div>
+<div class="section" id="hardware-interfaces">
+<h2>3.2 Hardware interfaces<a class="headerlink" href="#hardware-interfaces" title="Permalink to this headline">¶</a></h2>
+<p>The server recommends using a dedicated server.</p>
+</div>
+<div class="section" id="software-interfaces">
+<h2>3.3 Software interfaces<a class="headerlink" href="#software-interfaces" title="Permalink to this headline">¶</a></h2>
+<p>No special requirements.</p>
+</div>
+<div class="section" id="communication-protocols-and-interfaces">
+<h2>3.4 Communication protocols and interfaces<a class="headerlink" href="#communication-protocols-and-interfaces" title="Permalink to this headline">¶</a></h2>
+<p>No special requirements.</p>
+</div>
 </div>
 <div class="section" id="system-features">
 <h1>4.System Features<a class="headerlink" href="#system-features" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="system-feature-a">
+<h2>4.1 System feature A<a class="headerlink" href="#system-feature-a" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li>System feature A</li>
+<li>Action/result</li>
+<li>Functional requirements</li>
 </ul>
 </div></blockquote>
+</div>
 </div>
 <div class="section" id="other-non-functional-requirements">
 <h1>5.Other Non-functional Requirements<a class="headerlink" href="#other-non-functional-requirements" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="performance-requirements">
+<h2>5.1 Performance requirements<a class="headerlink" href="#performance-requirements" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div><ul class="simple">
-<li>Performance requirements</li>
-<li>Security requirements</li>
-<li>User documentation</li>
-</ul>
+<div><ol class="arabic simple">
+<li>The general response time of the client does not exceed 5 seconds.</li>
+<li>Supports concurrent use and guarantees unaffected performance.</li>
+</ol>
 </div></blockquote>
+</div>
+<div class="section" id="security-requirements">
+<h2>5.2 Security requirements<a class="headerlink" href="#security-requirements" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Data encryption</li>
+</ol>
+</div></blockquote>
+<dl class="docutils">
+<dt>This application program encrypts some important data according to a certain algorithm, such as user password, important parameters, etc.</dt>
+<dd><ol class="first last arabic simple">
+<li>Data backup</li>
+</ol>
+</dd>
+<dt>Allows users to back up and restore data to compensate for data corruption and loss.</dt>
+<dd><ol class="first last arabic simple">
+<li>Record log</li>
+</ol>
+</dd>
+</dl>
+<p>The application should be able to record all errors that occurred while the system was running, including native and network errors. These error logs make it easy to find the cause of the error. The log records the user’s housekeeping operation information and provides history information for the next use.</p>
+</div>
+<div class="section" id="user-documentation">
+<h2>5.3 User documentation<a class="headerlink" href="#user-documentation" title="Permalink to this headline">¶</a></h2>
+<dl class="docutils">
+<dt>User documentation distributed with the software includes:</dt>
+<dd><ol class="first last arabic simple">
+<li>Installation Manual: txt format file</li>
+<li>User Manual: txt format file</li>
+<li>Online help: HTML Help format files, online</li>
+</ol>
+</dd>
+</dl>
+</div>
 </div>
 <div class="section" id="other-requirements">
 <h1>6.Other Requirements<a class="headerlink" href="#other-requirements" title="Permalink to this headline">¶</a></h1>
-<p>Content1</p>
+<blockquote>
+<div><ol class="arabic simple">
+<li>Supports multiple browsers</li>
+<li>System installation is quick and easy, and easy to maintain</li>
+</ol>
+</div></blockquote>
 </div>
 <div class="section" id="others">
 <h1>7.Others<a class="headerlink" href="#others" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="use-cases">
+<h2>7.1 Use Cases<a class="headerlink" href="#use-cases" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>** Actors: <a href="#id1"><span class="problematic" id="id2">**</span></a>User
+** Purpose: <a href="#id3"><span class="problematic" id="id4">**</span></a>To identify differentially expressed genes given a gene expression file containing two cell samples.
+** 8Overview: ** User uploads a plain text file containing gene expression levels from two samples, representing two experimental conditions. The web application displays a table and a scatter plot given a gene expression file.
+** Main Scenario: **</div></blockquote>
+<ol class="arabic simple">
+<li>User uploads a plain text file containing gene expression levels from two samples, representing two experimental conditions.</li>
+<li>Accepting the file, the software will return a table of differentially expressed genes and a scatter plot of these genes whose X-axis is control and Y-axis is treatment.</li>
+</ol>
+<p>Alternate Scenario 2.a (User uploads invalid gene expression):
+1. User uploads a plain text file containing gene expression levels from two samples, representing two experimental conditions.
+2. The web application returns a page informing the user to provide the correct format.</p>
+</div>
+<div class="section" id="change-cases">
+<h2>7.2 Change cases<a class="headerlink" href="#change-cases" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ul class="simple">
-<li>Use Cases</li>
-<li>Change cases</li>
-<li>Milestone</li>
+<li>Change case: The web application can enter multiple data for processing.</li>
+<li>Likelihood: Certain. Developers have the appropriate technology.</li>
+<li>Impact: Large. The system handles data more quickly and easily.</li>
 </ul>
-<p>a picture</p>
 </div></blockquote>
-<img alt="../images/a.jpg" src="../images/a.jpg" />
+</div>
+<div class="section" id="milestone">
+<h2>7.3 Milestone<a class="headerlink" href="#milestone" title="Permalink to this headline">¶</a></h2>
+<p>Step-by-step implementation various functions of the web application, and set up to Milestone in the implementation process to facilitate retrospective changes to the realization of various functions.
+#. Input
+A valid submitted gene expression file has the following format.  It is a TAB-delimited, plain text file with three columns.  The file contains an optional head line, followed by each gene’s expression in a control sample and in a treatment sample.
+#. Analysis
+The system analysis and compare the given data. And generate the Output.
+#. Output
+The web application displays a table and a scatter plot given a gene expression file.
+The table contains a list of differentially expressed genes.
+The scatter plot displays differentially expressed genes.  The X-axis is Control, and Y-axis is Treatment.</p>
+</div>
 </div>
 
 
