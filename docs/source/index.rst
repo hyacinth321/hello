@@ -152,7 +152,7 @@ User documentation distributed with the software includes:
 
  Main Scenario: 
 
- #.User uploads a plain text file containing gene expression levels from two samples, representing two experimental conditions.
+ #. User uploads a plain text file containing gene expression levels from two samples, representing two experimental conditions.
  #. Accepting the file, the software will return a table of differentially expressed genes and a scatter plot of these genes whose X-axis is control and Y-axis is treatment.
 
 Alternate Scenario 2.a (User uploads invalid gene expression):

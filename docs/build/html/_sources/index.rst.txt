@@ -71,7 +71,7 @@ Application Server: Tomcat 5.5 or later
 3.1 User interfaces
 -------------------
  * Input interface
-The approximate input interface frame is as follows:
+   The approximate input interface frame is as follows:
 
 .. image:: ../images/a.jpg
 
@@ -116,16 +116,19 @@ No special requirements.
 
 5.2 Security requirements
 -------------------------
- #. Data encryption::
-This application program encrypts some important data according to a certain algorithm, such as user password, important parameters, etc.
- #. Data backup::
-Allows users to back up and restore data to compensate for data corruption and loss.
- #. Record log::
-The application should be able to record all errors that occurred while the system was running, including native and network errors. These error logs make it easy to find the cause of the error. The log records the user's housekeeping operation information and provides history information for the next use.
+ * Data encryption 
+
+   This application program encrypts some important data according to a certain algorithm, such as user password, important parameters, etc.
+
+ * Data backup 
+   Allows users to back up and restore data to compensate for data corruption and loss.
+
+ * Record log 
+   The application should be able to record all errors that occurred while the system was running, including native and network errors. These error logs make it easy to find the cause of the error. The log records the user's housekeeping operation information and provides history information for the next use.
 
 5.3 User documentation
 ----------------------
-User documentation distributed with the software includes: ::
+User documentation distributed with the software includes:
  #. Installation Manual: txt format file
  #. User Manual: txt format file
  #. Online help: HTML Help format files, online
@@ -141,16 +144,20 @@ User documentation distributed with the software includes: ::
 7.1 Use Cases
 -------------
 
- ** Actors: ** User::
- ** Purpose: ** To identify differentially expressed genes given a gene expression file containing two cell samples.::
- ** 8Overview: ** User uploads a plain text file containing gene expression levels from two samples, representing two experimental conditions. The web application displays a table and a scatter plot given a gene expression file.::
- ** Main Scenario: ** ::
-1. User uploads a plain text file containing gene expression levels from two samples, representing two experimental conditions.
-2. Accepting the file, the software will return a table of differentially expressed genes and a scatter plot of these genes whose X-axis is control and Y-axis is treatment.
+ Actors: User
+
+ Purpose: To identify differentially expressed genes given a gene expression file containing two cell samples.
+
+ Overview: User uploads a plain text file containing gene expression levels from two samples, representing two experimental conditions. The web application displays a table and a scatter plot given a gene expression file.
+
+ Main Scenario: 
+
+ #.User uploads a plain text file containing gene expression levels from two samples, representing two experimental conditions.
+ #. Accepting the file, the software will return a table of differentially expressed genes and a scatter plot of these genes whose X-axis is control and Y-axis is treatment.
 
 Alternate Scenario 2.a (User uploads invalid gene expression):
-1. User uploads a plain text file containing gene expression levels from two samples, representing two experimental conditions.
-2. The web application returns a page informing the user to provide the correct format.
+ #. User uploads a plain text file containing gene expression levels from two samples, representing two experimental conditions.
+ #. The web application returns a page informing the user to provide the correct format.
 
 7.2 Change cases
 ----------------
@@ -161,11 +168,11 @@ Alternate Scenario 2.a (User uploads invalid gene expression):
 7.3 Milestone
 -------------
 Step-by-step implementation various functions of the web application, and set up to Milestone in the implementation process to facilitate retrospective changes to the realization of various functions.
- #. Input ::
-A valid submitted gene expression file has the following format.  It is a TAB-delimited, plain text file with three columns.  The file contains an optional head line, followed by each gene's expression in a control sample and in a treatment sample.
- #. Analysis ::
-The system analysis and compare the given data. And generate the Output. 
- #. Output ::
-The web application displays a table and a scatter plot given a gene expression file.
+ * Input 
+   A valid submitted gene expression file has the following format.  It is a TAB-delimited, plain text file with three columns.  The file contains an optional head line, followed by each gene's expression in a control sample and in a treatment sample.
+ * Analysis
+   The system analysis and compare the given data. And generate the Output. 
+ * Output 
+   The web application displays a table and a scatter plot given a gene expression file.
 The table contains a list of differentially expressed genes.
 The scatter plot displays differentially expressed genes.  The X-axis is Control, and Y-axis is Treatment.
