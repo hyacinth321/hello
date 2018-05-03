@@ -36,9 +36,9 @@ The web application has a simple interface with a single button [Upload and GO].
 2.2 Product functions
 ---------------------
 The Oh My Genes system has the following functions:
-#.Provide users with a table of differentially expressed genes.
-#.Provide users with a scatter plot of these genes whose X-axis is control and Y-axis is treatment.
-#.Provide users with a gene expression file.
+ #. Provide users with a table of differentially expressed genes.
+ #. Provide users with a scatter plot of these genes whose X-axis is control and Y-axis is treatment.
+ #. Provide users with a gene expression file.
 
 2.3 User classes and characteristics
 ------------------------------------
@@ -46,7 +46,8 @@ Biologists in the Little Hill Laboratory for Optimal Life (potentially worldwide
 
 2.4 Operating environment
 -------------------------
-This figure illustrates an example of a Oh My Genes operating environment. It includes a firewall, a Web front-end cluster, and the application server. 
+This figure illustrates an example of a Oh My Genes operating environment. It includes a firewall, a Web front-end cluster, and the application server.
+ 
 .. image:: ../images/a.jpg
 
 2.5 User environment
@@ -58,10 +59,10 @@ The system's operating environment is divided into two parts of the client.
 2.6 Design/implementation constraints
 -------------------------------------
 The following is the software environment of the system:
- #. Client
+1.Client
 Operating System: Windows 2000 Professional/XP or later
 Browser: IE6 and above, other common browsers such as FireFox, Chrome, etc.
- #. Application server
+2.Application server
 Operating System: Windows 2000 Sever or later
 Application Server: Tomcat 5.5 or later
 
@@ -69,13 +70,17 @@ Application Server: Tomcat 5.5 or later
 =================================
 3.1 User interfaces
 -------------------
- #.Input interface
+ * Input interface
 The approximate input interface frame is as follows:
+
 .. image:: ../images/a.jpg
+
 The interface shows a text message to prompt the user to choose a plain text file containing gene expression levels from two samples. A area, click to select local file upload. A button, click to upload the file and call the system to analyze the data.
- #. Output interface
+ * Output interface
 The approximate output interface frame is as follows:
+
 .. image:: ../images/a.jpg
+
 The interface shows the contents of the output file, which contains a table and a scatter plot given a gene expression file.
 The table contains a list of differentially expressed genes with the following format:
 gene_id  control_sample  treat_sample  log_2[FC]
@@ -111,16 +116,16 @@ No special requirements.
 
 5.2 Security requirements
 -------------------------
- #. Data encryption
+ #. Data encryption::
 This application program encrypts some important data according to a certain algorithm, such as user password, important parameters, etc.
- #. Data backup
+ #. Data backup::
 Allows users to back up and restore data to compensate for data corruption and loss.
- #. Record log
+ #. Record log::
 The application should be able to record all errors that occurred while the system was running, including native and network errors. These error logs make it easy to find the cause of the error. The log records the user's housekeeping operation information and provides history information for the next use.
 
 5.3 User documentation
 ----------------------
-User documentation distributed with the software includes:
+User documentation distributed with the software includes: ::
  #. Installation Manual: txt format file
  #. User Manual: txt format file
  #. Online help: HTML Help format files, online
@@ -136,10 +141,10 @@ User documentation distributed with the software includes:
 7.1 Use Cases
 -------------
 
- ** Actors: **User
- ** Purpose: **To identify differentially expressed genes given a gene expression file containing two cell samples.
- ** 8Overview: ** User uploads a plain text file containing gene expression levels from two samples, representing two experimental conditions. The web application displays a table and a scatter plot given a gene expression file.
- ** Main Scenario: **
+ ** Actors: ** User::
+ ** Purpose: ** To identify differentially expressed genes given a gene expression file containing two cell samples.::
+ ** 8Overview: ** User uploads a plain text file containing gene expression levels from two samples, representing two experimental conditions. The web application displays a table and a scatter plot given a gene expression file.::
+ ** Main Scenario: ** ::
 1. User uploads a plain text file containing gene expression levels from two samples, representing two experimental conditions.
 2. Accepting the file, the software will return a table of differentially expressed genes and a scatter plot of these genes whose X-axis is control and Y-axis is treatment.
 
@@ -156,11 +161,11 @@ Alternate Scenario 2.a (User uploads invalid gene expression):
 7.3 Milestone
 -------------
 Step-by-step implementation various functions of the web application, and set up to Milestone in the implementation process to facilitate retrospective changes to the realization of various functions.
-#. Input
+ #. Input ::
 A valid submitted gene expression file has the following format.  It is a TAB-delimited, plain text file with three columns.  The file contains an optional head line, followed by each gene's expression in a control sample and in a treatment sample.
-#. Analysis
+ #. Analysis ::
 The system analysis and compare the given data. And generate the Output. 
-#. Output 
+ #. Output ::
 The web application displays a table and a scatter plot given a gene expression file.
 The table contains a list of differentially expressed genes.
 The scatter plot displays differentially expressed genes.  The X-axis is Control, and Y-axis is Treatment.

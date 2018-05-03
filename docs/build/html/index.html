@@ -223,10 +223,15 @@
 </div>
 <div class="section" id="product-functions">
 <h2>2.2 Product functions<a class="headerlink" href="#product-functions" title="Permalink to this headline">¶</a></h2>
-<p>The Oh My Genes system has the following functions:
-#.Provide users with a table of differentially expressed genes.
-#.Provide users with a scatter plot of these genes whose X-axis is control and Y-axis is treatment.
-#.Provide users with a gene expression file.</p>
+<dl class="docutils">
+<dt>The Oh My Genes system has the following functions:</dt>
+<dd><ol class="first last arabic simple">
+<li>Provide users with a table of differentially expressed genes.</li>
+<li>Provide users with a scatter plot of these genes whose X-axis is control and Y-axis is treatment.</li>
+<li>Provide users with a gene expression file.</li>
+</ol>
+</dd>
+</dl>
 </div>
 <div class="section" id="user-classes-and-characteristics">
 <h2>2.3 User classes and characteristics<a class="headerlink" href="#user-classes-and-characteristics" title="Permalink to this headline">¶</a></h2>
@@ -234,8 +239,8 @@
 </div>
 <div class="section" id="operating-environment">
 <h2>2.4 Operating environment<a class="headerlink" href="#operating-environment" title="Permalink to this headline">¶</a></h2>
-<p>This figure illustrates an example of a Oh My Genes operating environment. It includes a firewall, a Web front-end cluster, and the application server.
-.. image:: ../images/a.jpg</p>
+<p>This figure illustrates an example of a Oh My Genes operating environment. It includes a firewall, a Web front-end cluster, and the application server.</p>
+<img alt="../images/a.jpg" src="../images/a.jpg" />
 </div>
 <div class="section" id="user-environment">
 <h2>2.5 User environment<a class="headerlink" href="#user-environment" title="Permalink to this headline">¶</a></h2>
@@ -245,21 +250,12 @@ The system’s operating environment is divided into two parts of the client.</p
 </div>
 <div class="section" id="design-implementation-constraints">
 <h2>2.6 Design/implementation constraints<a class="headerlink" href="#design-implementation-constraints" title="Permalink to this headline">¶</a></h2>
-<dl class="docutils">
-<dt>The following is the software environment of the system:</dt>
-<dd><ol class="first last arabic simple">
-<li>Client</li>
-</ol>
-</dd>
-</dl>
-<p>Operating System: Windows 2000 Professional/XP or later
-Browser: IE6 and above, other common browsers such as FireFox, Chrome, etc.</p>
-<blockquote>
-<div><ol class="arabic simple">
-<li>Application server</li>
-</ol>
-</div></blockquote>
-<p>Operating System: Windows 2000 Sever or later
+<p>The following is the software environment of the system:
+1.Client
+Operating System: Windows 2000 Professional/XP or later
+Browser: IE6 and above, other common browsers such as FireFox, Chrome, etc.
+2.Application server
+Operating System: Windows 2000 Sever or later
 Application Server: Tomcat 5.5 or later</p>
 </div>
 </div>
@@ -268,18 +264,22 @@ Application Server: Tomcat 5.5 or later</p>
 <div class="section" id="user-interfaces">
 <h2>3.1 User interfaces<a class="headerlink" href="#user-interfaces" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div>#.Input interface</div></blockquote>
-<p>The approximate input interface frame is as follows:
-.. image:: ../images/a.jpg
-The interface shows a text message to prompt the user to choose a plain text file containing gene expression levels from two samples. A area, click to select local file upload. A button, click to upload the file and call the system to analyze the data.</p>
-<blockquote>
-<div><ol class="arabic simple">
-<li>Output interface</li>
-</ol>
+<div><ul class="simple">
+<li>Input interface</li>
+</ul>
 </div></blockquote>
-<p>The approximate output interface frame is as follows:
-.. image:: ../images/a.jpg
-The interface shows the contents of the output file, which contains a table and a scatter plot given a gene expression file.
+<p>The approximate input interface frame is as follows:</p>
+<img alt="../images/a.jpg" src="../images/a.jpg" />
+<dl class="docutils">
+<dt>The interface shows a text message to prompt the user to choose a plain text file containing gene expression levels from two samples. A area, click to select local file upload. A button, click to upload the file and call the system to analyze the data.</dt>
+<dd><ul class="first last simple">
+<li>Output interface</li>
+</ul>
+</dd>
+</dl>
+<p>The approximate output interface frame is as follows:</p>
+<img alt="../images/a.jpg" src="../images/a.jpg" />
+<p>The interface shows the contents of the output file, which contains a table and a scatter plot given a gene expression file.
 The table contains a list of differentially expressed genes with the following format:
 gene_id  control_sample  treat_sample  log_2[FC]
 AT1G01010  1.198558083  2.036161827  0.76
@@ -326,18 +326,18 @@ Replace ‘Control’ and ‘Treatment’ with appropriated column names if prov
 <h2>5.2 Security requirements<a class="headerlink" href="#security-requirements" title="Permalink to this headline">¶</a></h2>
 <blockquote>
 <div><ol class="arabic simple">
-<li>Data encryption</li>
+<li>Data encryption:</li>
 </ol>
 </div></blockquote>
 <dl class="docutils">
 <dt>This application program encrypts some important data according to a certain algorithm, such as user password, important parameters, etc.</dt>
 <dd><ol class="first last arabic simple">
-<li>Data backup</li>
+<li>Data backup:</li>
 </ol>
 </dd>
 <dt>Allows users to back up and restore data to compensate for data corruption and loss.</dt>
 <dd><ol class="first last arabic simple">
-<li>Record log</li>
+<li>Record log:</li>
 </ol>
 </dd>
 </dl>
@@ -346,7 +346,7 @@ Replace ‘Control’ and ‘Treatment’ with appropriated column names if prov
 <div class="section" id="user-documentation">
 <h2>5.3 User documentation<a class="headerlink" href="#user-documentation" title="Permalink to this headline">¶</a></h2>
 <dl class="docutils">
-<dt>User documentation distributed with the software includes:</dt>
+<dt>User documentation distributed with the software includes: ::</dt>
 <dd><ol class="first last arabic simple">
 <li>Installation Manual: txt format file</li>
 <li>User Manual: txt format file</li>
@@ -370,9 +370,9 @@ Replace ‘Control’ and ‘Treatment’ with appropriated column names if prov
 <div class="section" id="use-cases">
 <h2>7.1 Use Cases<a class="headerlink" href="#use-cases" title="Permalink to this headline">¶</a></h2>
 <blockquote>
-<div>** Actors: <a href="#id1"><span class="problematic" id="id2">**</span></a>User
-** Purpose: <a href="#id3"><span class="problematic" id="id4">**</span></a>To identify differentially expressed genes given a gene expression file containing two cell samples.
-** 8Overview: ** User uploads a plain text file containing gene expression levels from two samples, representing two experimental conditions. The web application displays a table and a scatter plot given a gene expression file.
+<div>** Actors: ** User::
+** Purpose: ** To identify differentially expressed genes given a gene expression file containing two cell samples.::
+** 8Overview: ** User uploads a plain text file containing gene expression levels from two samples, representing two experimental conditions. The web application displays a table and a scatter plot given a gene expression file.::
 ** Main Scenario: **</div></blockquote>
 <ol class="arabic simple">
 <li>User uploads a plain text file containing gene expression levels from two samples, representing two experimental conditions.</li>
@@ -394,13 +394,24 @@ Replace ‘Control’ and ‘Treatment’ with appropriated column names if prov
 </div>
 <div class="section" id="milestone">
 <h2>7.3 Milestone<a class="headerlink" href="#milestone" title="Permalink to this headline">¶</a></h2>
-<p>Step-by-step implementation various functions of the web application, and set up to Milestone in the implementation process to facilitate retrospective changes to the realization of various functions.
-#. Input
-A valid submitted gene expression file has the following format.  It is a TAB-delimited, plain text file with three columns.  The file contains an optional head line, followed by each gene’s expression in a control sample and in a treatment sample.
-#. Analysis
-The system analysis and compare the given data. And generate the Output.
-#. Output
-The web application displays a table and a scatter plot given a gene expression file.
+<dl class="docutils">
+<dt>Step-by-step implementation various functions of the web application, and set up to Milestone in the implementation process to facilitate retrospective changes to the realization of various functions.</dt>
+<dd><ol class="first last arabic simple">
+<li>Input</li>
+</ol>
+</dd>
+<dt>A valid submitted gene expression file has the following format.  It is a TAB-delimited, plain text file with three columns.  The file contains an optional head line, followed by each gene’s expression in a control sample and in a treatment sample.</dt>
+<dd><ol class="first last arabic simple">
+<li>Analysis</li>
+</ol>
+</dd>
+<dt>The system analysis and compare the given data. And generate the Output.</dt>
+<dd><ol class="first last arabic simple">
+<li>Output</li>
+</ol>
+</dd>
+</dl>
+<p>The web application displays a table and a scatter plot given a gene expression file.
 The table contains a list of differentially expressed genes.
 The scatter plot displays differentially expressed genes.  The X-axis is Control, and Y-axis is Treatment.</p>
 </div>
