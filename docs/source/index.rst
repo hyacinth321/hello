@@ -1,20 +1,5 @@
-.. Oh my genes documentation master file, created by
-   sphinx-quickstart on Thu May  3 10:09:06 2018.
-   You can adapt this file completely to your liking, but it should at least
-   contain the root `toctree` directive.
-
-Welcome to Oh my genes's documentation!
-=======================================
-
 .. toctree::
-   :maxdepth: 2
-   :caption: Contents:
+   :maxdepth: 2 # 2表示在索引中添加各个文件的2级标题
+   :numbered: # 如果有多个章节则可以进行编号
 
-
-
-Indices and tables
-==================
-
-* :ref:`genindex`
-* :ref:`modindex`
-* :ref:`search`
+   intro # 添加文件，不需要写后缀
