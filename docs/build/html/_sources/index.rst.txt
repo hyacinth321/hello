@@ -23,3 +23,7 @@ Or automatically numbered:
 Subtitle2
 ----------------
 Content2
+
+ a picture
+
+.. image:: ../images/a.jpg
