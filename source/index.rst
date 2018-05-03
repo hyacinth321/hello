@@ -73,13 +73,13 @@ Application Server: Tomcat 5.5 or later
  * Input interface
    The approximate input interface frame is as follows:
 
-.. image:: ../images/a.jpg
+.. image:: ../images/b.jpg
 
 The interface shows a text message to prompt the user to choose a plain text file containing gene expression levels from two samples. A area, click to select local file upload. A button, click to upload the file and call the system to analyze the data.
  * Output interface
 The approximate output interface frame is as follows:
 
-.. image:: ../images/a.jpg
+.. image:: ../images/c.jpg
 
 The interface shows the contents of the output file, which contains a table and a scatter plot given a gene expression file.
 The table contains a list of differentially expressed genes with the following format:
